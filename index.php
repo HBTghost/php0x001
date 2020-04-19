@@ -6,7 +6,10 @@
 </head>
 <body>
   <?php 
-    echo("<h1>Hello World</h1>");
+    $who = "Brian";
+    $age = 19;
+    echo "<h1>Hello $who</h1>";
+    echo "<h1>Are $who $age years old 😭😭😭?</h1>";
   ?>
 </body>
 </html>
