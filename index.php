@@ -5,16 +5,16 @@
   <title>Welcome, Brian Drake</title>
 </head>
 <body>
+  <h1>Add 2 numbers:</h1>
   <form action="index.php" method="get">
-    Name: <input type="text" name="name">
-    <input type="submit">
+    <input type="number" name="num1">
     <br>
-    Age: <input type="number" name="age">
+    <input type="number" name="num2">
+    <br>
     <input type="submit">
   </form>
   <br>
-  Your name is: <?php echo $_GET["name"]?>
-  <br>
-  Your age is: <?php echo $_GET["age"]?>
+
+  Answer: <?php echo $_GET["num1"] + $_GET["num2"] ?>
 </body>
 </html>
