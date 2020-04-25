@@ -5,16 +5,21 @@
   <title>Welcome, Brian Drake</title>
 </head>
 <body>
-  <h1>Add 2 numbers:</h1>
-  <form action="index.php" method="get">
-    <input type="number" name="num1">
+  <form action="index.php" method="post">
+    <input type="checkbox" name="fruits[]" value="apples"> Apples
     <br>
-    <input type="number" name="num2">
+    <input type="checkbox" name="fruits[]" value="pears"> Pears
+    <br>
+    <input type="checkbox" name="fruits[]" value="strawberries"> Strawberries
     <br>
     <input type="submit">
   </form>
   <br>
+  Yours choice:
+  <?php
+    $friends = array("apples" => "good", "strawberries" => "fine", "pears" => "terrible");
+    echo $friends[$_POST["fruits"][0]];
+  ?>
 
-  Answer: <?php echo $_GET["num1"] + $_GET["num2"] ?>
 </body>
 </html>
