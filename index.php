@@ -16,10 +16,18 @@
         $this->age = $age;
         $this->job = $job;
       }
+
+      function isGrown() {
+        return $this->age >= 18;
+      }
     }
 
     $Brian = new Person("Brian", "20", "DevOps");
-    echo $Brian->job;
+    if ($Brian->isGrown()) {
+      echo "$Brian->name is grown";
+    } else {
+      echo "$Brian->name isn't grown";
+    }
   ?>
 
 </body>
