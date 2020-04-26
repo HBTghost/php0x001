@@ -6,27 +6,30 @@
 </head>
 <body>
   <form action="index.php" method="post">
-    <input type="checkbox" name="fruits[]" value="apples"> Apples
+    Number 1: <input type="number" step="0.1" name="num1">
     <br>
-    <input type="checkbox" name="fruits[]" value="pears"> Pears
+    Operator: <input type="text" name="op">
     <br>
-    <input type="checkbox" name="fruits[]" value="strawberries"> Strawberries
+    Number 2: <input type="number" step="0.1" name="num2">
     <br>
     <input type="submit">
   </form>
   <br>
   <?php
-    function sayHi($name) {
-        echo "Hello $name <br>";
+    $num1 = $_POST["num1"];
+    $op = $_POST["op"];
+    $num2 = $_POST["num2"];
+    if ($op == "+") {
+      echo $num1 + $num2;
+    } elseif ($op == "-") {
+      echo $num1 - $num2;
+    } elseif ($op == "*") {
+      echo $num1 * $num2;
+    } elseif ($op == "/") {
+      echo $num1 / $num2;
+    } else {
+      echo "Invalid $Operator";
     }
-    $myName = "Drake";
-    if ($myName) {
-      sayHi($myName);
-    }
-
-    $friends = array("apples" => "good", "strawberries" => "fine", "pears" => "terrible");
-    echo "Yours choice: ";
-    echo $friends[$_POST["fruits"][0]];
   ?>
 
 </body>
