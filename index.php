@@ -6,16 +6,9 @@
 </head>
 <body>
   <?php
-    $friends = array("Brian", "Drake", "John");
-    $len = count($friends);
-    echo "For Loop: <br>";
-    for ($i=0; $i < $len; $i++) { 
-      echo "$friends[$i] <br>";
-    }
-    echo "<br>While Loop: <br>";
-    while (--$len >= 0) {
-      echo "$friends[$len] <br>";
-    }
+    include "tools.php";
+    echo "pi = $pi";
+    sayHi("Brian");
   ?>
 
 </body>
