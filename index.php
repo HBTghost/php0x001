@@ -15,9 +15,17 @@
     <input type="submit">
   </form>
   <br>
-  Yours choice:
   <?php
+    function sayHi($name) {
+        echo "Hello $name <br>";
+    }
+    $myName = "Drake";
+    if ($myName) {
+      sayHi($myName);
+    }
+
     $friends = array("apples" => "good", "strawberries" => "fine", "pears" => "terrible");
+    echo "Yours choice: ";
     echo $friends[$_POST["fruits"][0]];
   ?>
 
