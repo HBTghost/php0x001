@@ -9,12 +9,10 @@
     class Person {
       public $name;
       private $age;
-      public $job;
 
-      function __construct($name, $age, $job) {
+      function __construct($name, $age) {
         $this->name = $name;
         $this->setAge($age);
-        $this->job = $job;
       }
 
       function setAge($age) {
@@ -33,15 +31,24 @@
         return $this->age >= 18;
       }
     }
+    
+    class Student extends Person {
+      function getJob() {
+        return "Student";
+      }
+    }
 
-    $Brian = new Person("Brian", -3, "DevOps");
+    $Brian = new Person("Brian", -3);
     $age = $Brian->getAge();
     echo "Age $age <br>";
     if ($Brian->isGrown()) {
-      echo "$Brian->name is grown";
+      echo "$Brian->name is grown <br>";
     } else {
-      echo "$Brian->name isn't grown";
+      echo "$Brian->name isn't grown <br>";
     }
+
+    $John = new Student("John", 5);
+    echo $John->getJob();
   ?>
 
 </body>
