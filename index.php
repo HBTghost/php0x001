@@ -6,9 +6,20 @@
 </head>
 <body>
   <?php
-    include "tools.php";
-    echo "pi = $pi";
-    sayHi("Brian");
+    class Person {
+      var $name;
+      var $age;
+      var $job;
+
+      function __construct($name, $age, $job) {
+        $this->name = $name;
+        $this->age = $age;
+        $this->job = $job;
+      }
+    }
+
+    $Brian = new Person("Brian", "20", "DevOps");
+    echo $Brian->job;
   ?>
 
 </body>
