@@ -19,16 +19,22 @@
     $num1 = $_POST["num1"];
     $op = $_POST["op"];
     $num2 = $_POST["num2"];
-    if ($op == "+") {
-      echo $num1 + $num2;
-    } elseif ($op == "-") {
-      echo $num1 - $num2;
-    } elseif ($op == "*") {
-      echo $num1 * $num2;
-    } elseif ($op == "/") {
-      echo $num1 / $num2;
-    } else {
-      echo "Invalid $Operator";
+    switch ($op) {
+      case '+':
+        echo $num1 + $num2;
+        break;
+      case '-':
+        echo $num1 - $num2;
+        break;
+      case '*':
+        echo $num1 * $num2;
+        break;
+      case '/':
+        echo $num1 / $num2;
+        break;
+      default:
+        echo "Invalid Operator";
+        break;
     }
   ?>
 
